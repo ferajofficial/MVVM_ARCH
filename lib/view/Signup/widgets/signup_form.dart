@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mvvm_arch/core/router/router.gr.dart';
 import 'package:mvvm_arch/view/Signup/widgets/signup_methods.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -40,20 +42,12 @@ class SignupForm extends StatelessWidget {
         ).pOnly(bottom: 20),
         const TextField(
           decoration: InputDecoration(
-              hintText: ' Password', prefixIcon: Icon(Icons.fingerprint_sharp)),
-        ).pOnly(bottom: 20),
-        const TextField(
-          decoration: InputDecoration(
               hintText: ' Phone Number', prefixIcon: Icon(Icons.phone_iphone)),
         ).pOnly(bottom: 20),
-        const TextField(
-          decoration: InputDecoration(
-              hintText: ' City', prefixIcon: Icon(Icons.location_city)),
-        ),
         ElevatedButton(
             onPressed: () {
-
-              print("signup button pressed");
+              AutoRouter.of(context).push(const HomeRoute());
+              // print("signup button pressed");
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xff4361ee),

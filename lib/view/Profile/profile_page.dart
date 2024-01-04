@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mvvm_arch/const/resource.dart';
+import 'package:mvvm_arch/core/router/router.gr.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()
@@ -31,12 +32,10 @@ class _ProfileViewState extends State<ProfileView> {
             onPressed: () {}, icon: const Icon(Icons.arrow_back_ios)),
       ),
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Image.asset(
             R.ASSETS_IMAGES_PROFILE_PNG,
-            // height: 300,
           ),
           const TextField(
             readOnly: true,
@@ -64,7 +63,8 @@ class _ProfileViewState extends State<ProfileView> {
           ).pOnly(bottom: 20, left: 10, right: 10),
           ElevatedButton(
               onPressed: () {
-                print("Logout button pressed");
+                 AutoRouter.of(context).push(LoginRoute());
+                // print("Logout button pressed");
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xff4361ee),
@@ -77,7 +77,7 @@ class _ProfileViewState extends State<ProfileView> {
                 'Logout',
                 style: GoogleFonts.poppins(
                   fontSize: 18,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w700,
                   color: Colors.white,
                 ),
               )).pOnly(top: 20, left: 10, right: 10),

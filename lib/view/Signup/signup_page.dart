@@ -25,15 +25,12 @@ class _SignupViewState extends State<SignupView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(R.ASSETS_ILLUSTRATIONS_SIGNUP_PNG, height: 200)
-                .pOnly(top: 50),
-            const SignupForm().p12(),
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(R.ASSETS_ILLUSTRATIONS_SIGNUP_PNG).pOnly(top: 50),
+          const SignupForm().p12(),
+        ],
       ),
     );
   }

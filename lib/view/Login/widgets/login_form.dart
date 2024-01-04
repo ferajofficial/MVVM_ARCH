@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mvvm_arch/core/router/router.gr.dart';
 import 'package:mvvm_arch/view/Login/widgets/login_methods.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -32,8 +34,8 @@ class LoginForm extends StatelessWidget {
         ).pOnly(bottom: 20),
         ElevatedButton(
             onPressed: () {
-              // Navigator.pushNamed(context, '/home');
-              print("login button pressed");
+              AutoRouter.of(context).push(const HomeRoute());
+              // print("login button pressed");
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xff4361ee),
@@ -61,8 +63,8 @@ class LoginForm extends StatelessWidget {
         const LoginMethods(),
         GestureDetector(
           onTap: () {
-            // Navigator.pushNamed(context, '/home');
-            print("signup text pressed");
+            AutoRouter.of(context).push(const SignupRoute());
+            // print("signup text pressed");
           },
           child: RichText(
               text: TextSpan(
