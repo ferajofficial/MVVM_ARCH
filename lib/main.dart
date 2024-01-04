@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm_arch/view/homeView.dart';
+import 'package:mvvm_arch/view/Login/login_page.dart';
+import 'package:mvvm_arch/view/Profile/profile_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const HomeView(),
+
+      // home: const HomePage(),
+      // home: const LoginPage(),
+      // home: const SplashPage(),
+      home: const ProfilePage(),
+      // home: const SignupPage(),
     );
   }
 }
