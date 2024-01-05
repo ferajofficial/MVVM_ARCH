@@ -6,11 +6,7 @@ class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
         AdaptiveRoute(page: LoginRoute.page, path: '/login', initial: true),
-        AdaptiveRoute(
-          page: HomeRoute.page,
-          path: '/home',
-          // initial: true
-        ),
+        AdaptiveRoute(page: HomeRoute.page,path: '/home',),
         AdaptiveRoute(page: SignupRoute.page, path: '/signup'),
         AdaptiveRoute(page: ProfileRoute.page, path: '/profile'),
         AdaptiveRoute(page: SplashRoute.page, path: '/splash'),

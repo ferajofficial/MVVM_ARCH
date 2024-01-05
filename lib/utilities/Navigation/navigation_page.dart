@@ -20,30 +20,7 @@ class _NavigationViewState extends State<NavigationView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body:  NavigationBar(
-      //   items: const [
-      //     NavigationItem(
-      //       icon: Icon(Icons.home),
-      //       title: Text('Home'),
-      //     ),
-      //     NavigationItem(
-      //       icon: Icon(Icons.search),
-      //       title: Text('Search'),
-      //     ),
-      //     NavigationItem(
-      //       icon: Icon(Icons.person),
-      //       title: Text('Profile'),
-      //     ),
-      //   ],
-      //   selectedIndex: 0,
-      //   onDestinationSelected: (index) {}, destinations: [
-      //   NavigationDestination(
-      //     icon: Icon(Icons.home),
-      //     selectedIcon: Icon(Icons.home),
-      //     title: Text('Home'),
-      //   ),
-      //   ],
-      // );,
+     
     );
   }
 }

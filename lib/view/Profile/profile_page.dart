@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mvvm_arch/const/app_colors.dart';
 import 'package:mvvm_arch/const/resource.dart';
 import 'package:mvvm_arch/core/router/router.gr.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -63,11 +64,11 @@ class _ProfileViewState extends State<ProfileView> {
           ).pOnly(bottom: 20, left: 10, right: 10),
           ElevatedButton(
               onPressed: () {
-                 AutoRouter.of(context).push(LoginRoute());
+                 AutoRouter.of(context).push(const LoginRoute());
                 // print("Logout button pressed");
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xff4361ee),
+                backgroundColor:AppColors.kButtonColor,
                 fixedSize: const Size(250, 45),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
@@ -78,7 +79,7 @@ class _ProfileViewState extends State<ProfileView> {
                 style: GoogleFonts.poppins(
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
-                  color: Colors.white,
+                  color: AppColors.kButtonTextColor,
                 ),
               )).pOnly(top: 20, left: 10, right: 10),
         ],

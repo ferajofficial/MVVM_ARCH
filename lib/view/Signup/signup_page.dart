@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:mvvm_arch/const/resource.dart';
-import 'package:mvvm_arch/view/Signup/widgets/signup_form.dart';
+import 'package:mvvm_arch/view/signup/widgets/signup_form.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage()

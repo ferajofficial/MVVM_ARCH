@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:mvvm_arch/const/app_colors.dart';
 import 'package:mvvm_arch/const/resource.dart';
 
 @RoutePage()
@@ -24,7 +25,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[700],
+      backgroundColor: AppColors.kPrimaryBgColor,
       body: Center(
         child: LottieBuilder.asset(R.ASSETS_IMAGES_LOTTIEFILES_HELLO_JSON),
       ),

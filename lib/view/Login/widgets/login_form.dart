@@ -1,8 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mvvm_arch/const/app_colors.dart';
 import 'package:mvvm_arch/core/router/router.gr.dart';
-import 'package:mvvm_arch/view/Login/widgets/login_methods.dart';
+import 'package:mvvm_arch/view/login/widgets/login_methods.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class LoginForm extends StatelessWidget {
@@ -20,7 +21,7 @@ class LoginForm extends StatelessWidget {
               style: GoogleFonts.poppins(
                 fontSize: 30,
                 fontWeight: FontWeight.w600,
-                color: Colors.black,
+                color:AppColors.kPrimaryTextColor,
               )).pOnly(bottom: 20),
         ),
         const TextField(
@@ -38,7 +39,7 @@ class LoginForm extends StatelessWidget {
               // print("login button pressed");
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xff4361ee),
+              backgroundColor: AppColors.kButtonColor,
               fixedSize: const Size(250, 45),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(6),
@@ -49,7 +50,7 @@ class LoginForm extends StatelessWidget {
               style: GoogleFonts.poppins(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
-                color: Colors.white,
+                color: AppColors.kButtonTextColor,
               ),
             )).pOnly(top: 20),
         Text(
@@ -57,7 +58,7 @@ class LoginForm extends StatelessWidget {
           style: GoogleFonts.poppins(
             fontSize: 15,
             fontWeight: FontWeight.w500,
-            color: Colors.grey,
+            color: AppColors.kSecondaryTextColor,
           ),
         ).pOnly(top: 20, bottom: 20),
         const LoginMethods(),
@@ -72,7 +73,7 @@ class LoginForm extends StatelessWidget {
                   style: GoogleFonts.poppins(
                     fontSize: 15,
                     fontWeight: FontWeight.w500,
-                    color: Colors.grey,
+                    color: AppColors.kSecondaryTextColor,
                   ),
                   children: [
                 TextSpan(
@@ -80,7 +81,7 @@ class LoginForm extends StatelessWidget {
                   style: GoogleFonts.poppins(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
-                    color: Colors.blue[700],
+                    color: AppColors.kButtonColor,
                   ),
                 ),
               ])),
