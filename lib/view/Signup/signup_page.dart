@@ -28,7 +28,10 @@ class _SignupViewState extends State<SignupView> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(R.ASSETS_ILLUSTRATIONS_SIGNUP_PNG).pOnly(top: 50),
+          Image.asset(
+            R.ASSETS_ILLUSTRATIONS_SIGNUP_PNG,
+            height: 250,
+          ).pOnly(top: 50),
           const SignupForm().p12(),
         ],
       ),

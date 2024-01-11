@@ -30,46 +30,77 @@ class _ProfileViewState extends State<ProfileView> {
       appBar: AppBar(
         elevation: 0,
         leading: IconButton(
-            onPressed: () {}, icon: const Icon(Icons.arrow_back_ios)),
+            onPressed: () {
+              AutoRouter.of(context).pop();
+            },
+            icon: const Icon(Icons.arrow_back_ios)),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Image.asset(
-            R.ASSETS_IMAGES_PROFILE_PNG,
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: AppColors.kButtonColor,
+                width: 4,
+              ),
+              shape: BoxShape.circle,
+            ),
+            child: const CircleAvatar(
+              radius: 100,
+              backgroundImage: AssetImage(R.ASSETS_IMAGES_FERAJPROF_JPG),
+            ).p12(),
           ),
-          const TextField(
+          TextField(
             readOnly: true,
             decoration: InputDecoration(
-                hintText: 'Name',
-                prefixIcon: Icon(Icons.person),
-                border: OutlineInputBorder(
+                hintText: 'Sk Ferajuddin',
+                hintStyle: GoogleFonts.poppins(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.kTextFieldTextColor,
+                ),
+                prefixIcon: const Icon(Icons.person),
+                border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30)))),
-          ).pOnly(bottom: 20, left: 10, right: 10),
-          const TextField(
+          ).p20(),
+          TextField(
             readOnly: true,
             decoration: InputDecoration(
-                hintText: 'Email',
-                prefixIcon: Icon(Icons.alternate_email),
-                border: OutlineInputBorder(
+                hintText: 'xyz123@gmail.com',
+                hintStyle: GoogleFonts.poppins(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.kTextFieldTextColor,
+                ),
+                prefixIcon: const Icon(Icons.alternate_email),
+                border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30)))),
-          ).pOnly(bottom: 20, left: 10, right: 10),
-          const TextField(
+          ).p20(),
+          TextField(
             readOnly: true,
             decoration: InputDecoration(
-                hintText: 'City',
-                prefixIcon: Icon(Icons.location_city),
-                border: OutlineInputBorder(
+                hintText: 'Balasore, Odisha',
+                hintStyle: GoogleFonts.poppins(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.kTextFieldTextColor,
+                ),
+                //  TextStyle(
+                //     color: AppColors.kTextFieldTextColor,
+                //     fontWeight: FontWeight.w600),
+                prefixIcon: const Icon(Icons.location_city),
+                border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30)))),
-          ).pOnly(bottom: 20, left: 10, right: 10),
+          ).p20(),
           ElevatedButton(
               onPressed: () {
-                 AutoRouter.of(context).push(const LoginRoute());
+                AutoRouter.of(context).push(const LoginRoute());
                 // print("Logout button pressed");
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor:AppColors.kButtonColor,
-                fixedSize: const Size(250, 45),
+                backgroundColor: AppColors.kButtonColor,
+                // fixedSize: const Size(150, 45),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -78,7 +109,7 @@ class _ProfileViewState extends State<ProfileView> {
                 'Logout',
                 style: GoogleFonts.poppins(
                   fontSize: 18,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w500,
                   color: AppColors.kButtonTextColor,
                 ),
               )).pOnly(top: 20, left: 10, right: 10),

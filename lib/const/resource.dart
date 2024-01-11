@@ -15,6 +15,10 @@ class R {
   /// ![preview](file:///Users/skferajuddin/Desktop/development/FlutterProjects/mvvm_arch/assets/images/facebook.png)
   static const String ASSETS_IMAGES_FACEBOOK_PNG = 'assets/images/facebook.png';
 
+  /// ![preview](file:///Users/skferajuddin/Desktop/development/FlutterProjects/mvvm_arch/assets/images/ferajprof.jpg)
+  static const String ASSETS_IMAGES_FERAJPROF_JPG =
+      'assets/images/ferajprof.jpg';
+
   /// ![preview](file:///Users/skferajuddin/Desktop/development/FlutterProjects/mvvm_arch/assets/images/google.png)
   static const String ASSETS_IMAGES_GOOGLE_PNG = 'assets/images/google.png';
 
