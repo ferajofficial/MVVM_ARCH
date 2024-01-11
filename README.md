@@ -6,10 +6,11 @@ Im Sk Ferajuddin,
 - Screens Include : Splash,Login,Signup,Home,Profile.
 - Purpose Of The Application : Learning of new Arch. , new State management tech. , backend etc..
 
-                            #############################################
+                    ---------#############################################----------
 
 Here you can get the overview of this Application such as ScreenShots of the UI and Screen recordings
 
-for UI : 
-for Screen Recordings : 
+[Watch UI ScreenShots & Screen Recordings](https://drive.google.com/file/d/1JnyDOlB302v1Fw_VdqKYLqxT_AQholUc/view?usp=sharing)
+ 
+                -------------##############################################------------
 

@@ -25,12 +25,14 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(R.ASSETS_ILLUSTRATIONS_LOGIN_PNG),
-          const LoginForm().p12(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(R.ASSETS_ILLUSTRATIONS_LOGIN_PNG),
+            const LoginForm().p12(),
+          ],
+        ),
       ),
     );
   }
